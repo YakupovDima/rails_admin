@@ -156,7 +156,11 @@
           break;
       }
 
+      var filterContainerId = field_name + '-' + index + '-filter-container';
+      $('p#' + filterContainerId).remove();
+
       var $content = $('<p>')
+        .attr('id', filterContainerId)
         .addClass('filter form-search')
         .append(
           $('<span class="label label-info form-label"></span>')
